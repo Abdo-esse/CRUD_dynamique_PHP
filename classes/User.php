@@ -21,10 +21,15 @@ class User
         $this->id=Crud::create('users', ['name'=>$this->name,'email'=> $this->email,'tele'=> $this->tele]);
         
     } 
+    public function update(){
+        Crud:: update('users',$this->id, ['name'=>$this->name,'email'=> $this->email,'tele'=> $this->tele]);
+        return $this->read();
+    }
     public function readr(){
         $UserData=Crud::read('users', $this->id);
         $this->affectation($UserData);
         return  $this->__toString();
+        // return $UserData;
     }
 
         public function affectation($UserData){
@@ -36,7 +41,7 @@ class User
         }
 
    public function __toString(){
-    return "ID : $this->id , Name : $this->name , Email : $this->email";
+    return "ID : $this->id , Name : $this->name , Email : $this->email , tele:$this->tele ";
    }
    
 }   

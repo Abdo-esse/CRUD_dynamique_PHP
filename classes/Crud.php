@@ -19,8 +19,17 @@ class Crud
         $sql="SELECT * FROM $table WHERE id= ?";
         $stmt= Connexion :: $conn->prepare($sql);
         $stmt->execute([$id]);
-        
+
         return $stmt->fetch(PDO::FETCH_OBJ);
       }
+
+      static function update($table,$id,$data){
+        $columns=implode(' = ?, ',array_keys($data));
+        $sql="UPDATE $table SET  WHERE id = ?";
+        $stmt= Connexion :: $conn->prepare($sql);
+        $stmt->execute(array_merge(array_values($data),[$id]));
+      }
+
+      
 
 }

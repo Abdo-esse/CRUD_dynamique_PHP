@@ -7,10 +7,10 @@ require './classes/User.php';
 //   }
 
 
-$user= new User('Abdel ilah es','email','tele');
+// $user= new User('Abdel ilah es','email','tele');
 // $user2= new User('name2','email2','tele2');
 
-$user->create();
+// $user->create();
 
 echo '<pre>';
 // var_dump($user);

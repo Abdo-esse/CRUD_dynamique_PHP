@@ -7,4 +7,4 @@ create table users (
     email VARCHAR(50),
     tele VARCHAR(50)
     );
-    SELECT * FROM usey WHERE id=
+    UPDATE users SET WHERE
