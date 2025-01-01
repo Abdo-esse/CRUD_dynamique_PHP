@@ -24,10 +24,10 @@ class Crud
       }
 
       static function update($table,$id,$data){
-        $columns=implode(' = ?, ',array_keys($data));
-        $sql="UPDATE $table SET  WHERE id = ?";
+        $columns=implode(' = ?, ',array_keys($data)) . ' = ?';
+        $sql="UPDATE $table SET  $columns  WHERE id = ?";
         $stmt= Connexion :: $conn->prepare($sql);
-        $stmt->execute(array_merge(array_values($data),[$id]));
+        $stmt->execute(array_merge(array_values($data), [$id]));
       }
 
       

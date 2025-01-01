@@ -17,13 +17,16 @@ class User
     public function getId(){
         return  $this->id;
     }
+    public function setName($name){
+        $this->name=$name;
+    }
     public function create(){
         $this->id=Crud::create('users', ['name'=>$this->name,'email'=> $this->email,'tele'=> $this->tele]);
         
     } 
     public function update(){
-        Crud:: update('users',$this->id, ['name'=>$this->name,'email'=> $this->email,'tele'=> $this->tele]);
-        return $this->read();
+        Crud::update('users',$this->id, ['name'=>$this->name]);
+        return $this->readr();
     }
     public function readr(){
         $UserData=Crud::read('users', $this->id);
