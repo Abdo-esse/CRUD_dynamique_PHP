@@ -24,6 +24,8 @@ echo $user2->readr();
 $user->setName('abdo ');
 echo $user->update();
  $user2->delete();
+ echo'gfgfgf';
+ $user2->create();
 
 // echo '<pre>';
 // // var_dump($user);
