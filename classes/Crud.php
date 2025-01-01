@@ -30,6 +30,13 @@ class Crud
         $stmt->execute(array_merge(array_values($data), [$id]));
       }
 
+
+      static function delete($tabel,$id){
+        $sql="DELETE FROM $tabel WHERE id = ?";
+        $stmt = Connexion :: $conn->prepare($sql);
+        $stmt->execute([$id]);
+      }
+
       
 
 }

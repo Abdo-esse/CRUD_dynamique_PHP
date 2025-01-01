@@ -35,6 +35,10 @@ class User
         // return $UserData;
     }
 
+     public function delete(){
+        Crud::delete('users', $this->id);
+
+     }
         public function affectation($UserData){
             $this->id=$UserData->id;
             $this->name=$UserData->name;

@@ -4,7 +4,7 @@ class Connexion
 {
 private static $host="localhost";
 private static $dbName="CRUD_DUNAMYC";
-      private static $username="root";
+ private static $username="root";
       private static $password= "";
       static $conn;
       static function connect(){

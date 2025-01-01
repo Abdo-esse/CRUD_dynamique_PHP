@@ -7,4 +7,4 @@ create table users (
     email VARCHAR(50),
     tele VARCHAR(50)
     );
-    UPDATE users SET WHERE
+DELETE FROM p WHERE
