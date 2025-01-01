@@ -1,4 +1,5 @@
 <?php 
+include 'Crud.php';
 class User 
 {
     private $id;
@@ -14,6 +15,6 @@ class User
 
     }
     public function create(){
-        Crud::
+        Crud::create('users', ['name'=>$this->name,'email'=> $this->email,'tele'=> $this->tele]);
     } 
 }
