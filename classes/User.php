@@ -14,7 +14,11 @@ class User
         $this->tele=$tele;
 
     }
+    public function getId(){
+        return  $this->id;
+    }
     public function create(){
-        Crud::create('users', ['name'=>$this->name,'email'=> $this->email,'tele'=> $this->tele]);
+        $this->id=Crud::create('users', ['name'=>$this->name,'email'=> $this->email,'tele'=> $this->tele]);
+        
     } 
 }

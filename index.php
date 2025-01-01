@@ -11,4 +11,5 @@ $user->create();
 
 echo '<pre>';
 var_dump($user);
+echo $user->getId();
 echo '</pre>';
