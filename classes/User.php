@@ -21,4 +21,15 @@ class User
         $this->id=Crud::create('users', ['name'=>$this->name,'email'=> $this->email,'tele'=> $this->tele]);
         
     } 
-}
+    public function readr(){
+        $UserData=Crud::read('users', $this->id);
+        return $UserData;
+    }
+    
+
+
+   public function __toString(){
+    return "ID : $this->id , Name : $this->name , Email : $this->email";
+   }
+   
+}   
