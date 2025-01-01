@@ -14,7 +14,7 @@ $user->create();
 
 echo '<pre>';
 // var_dump($user);
-var_dump( $user->readr());
+echo $user->readr();
 // echo $user2;
 
 echo '</pre>';

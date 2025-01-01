@@ -23,10 +23,17 @@ class User
     } 
     public function readr(){
         $UserData=Crud::read('users', $this->id);
-        return $UserData;
+        $this->affectation($UserData);
+        return  $this->__toString();
     }
-    
 
+        public function affectation($UserData){
+            $this->id=$UserData->id;
+            $this->name=$UserData->name;
+            $this->email=$UserData->email;
+            $this->tele=$UserData->tele;
+    
+        }
 
    public function __toString(){
     return "ID : $this->id , Name : $this->name , Email : $this->email";
